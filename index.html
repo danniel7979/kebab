@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sultan Donner Kebab | Carta Digital</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Carta digital premium</span>
+        <h1>Sultan <span>Donner Kebab</span></h1>
+        <p>
+          Kebabs, dürums, platos turcos, entrantes, bebidas y postres.
+          Elige tus productos y prepara tu pedido desde la carta digital.
+        </p>
+        <div class="buttons">
+          <a href="#menu" class="btn btn-primary">Ver carta</a>
+          <a href="#qr" class="btn btn-secondary">Escanear QR</a>
+        </div>
+      </div>
+
+      <div id="qr" class="qr-card">
+        <h2>Escanea el QR</h2>
+        <p>Acceso rápido a la carta digital.</p>
+        <img alt="Código QR" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://sultan-donner-kebab.example/menu">
+        <small>sultan-donner-kebab.example/menu</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature"><strong>25+</strong>Productos</div>
+      <div class="feature"><strong>QR</strong>Carta digital</div>
+      <div class="feature"><strong>WhatsApp</strong>Pedido rápido</div>
+      <div class="feature"><strong>100%</strong>Responsive</div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Nuestra carta</h2>
+        <p>Busca productos, filtra por categoría y añade platos al carrito.</p>
+      </div>
+
+      <div class="toolbar">
+        <input id="search" type="text" placeholder="Buscar kebab, durum, falafel, bebida..." />
+        <div class="filters">
+          <button class="filter active" data-category="todos">Todos</button>
+          <button class="filter" data-category="kebab">Kebabs</button>
+          <button class="filter" data-category="durum">Dürums</button>
+          <button class="filter" data-category="plato">Platos</button>
+          <button class="filter" data-category="entrante">Entrantes</button>
+          <button class="filter" data-category="bebida">Bebidas</button>
+          <button class="filter" data-category="postre">Postres</button>
+        </div>
+      </div>
+
+      <div id="products" class="menu-grid"></div>
+    </div>
+  </section>
+
+  <div class="cart">
+    <h3>🛒 Tu pedido</h3>
+    <div id="cartItems" class="cart-items">
+      <p>Aún no has añadido productos.</p>
+    </div>
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="total">0,00 €</span>
+    </div>
+    <a id="whatsapp" class="whatsapp" target="_blank">Pedir por WhatsApp</a>
+    <button class="clear-btn" onclick="clearCart()">Vaciar carrito</button>
+  </div>
+
+  <footer>
+    © 2026 Sultan Donner Kebab · Web demo con productos y precios ficticios.
+  </footer>
+  <script src="./javascript/java.js"></script>
+</body>
+</html>
